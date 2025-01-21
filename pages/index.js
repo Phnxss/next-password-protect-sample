@@ -1,13 +1,21 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Login from 'components/login';
 
-export default function Home() {
+export default function Protected({ hasReadPermission }) {
+  const router = useRouter();
+
+  if (!hasReadPermission) {
+    return <Login redirectPath={router.asPath} />;
+  }
+
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Protected Page</title>
       </Head>
 
-      <main>Site content goes here.</main>
+      <main>I am supposed to be protected.</main>
     </div>
   );
 }
