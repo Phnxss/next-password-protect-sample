@@ -12,10 +12,10 @@ export default function Protected({ hasReadPermission }) {
   return (
     <div>
       <Head>
-        <title>Protected Page</title>
+        <title>Hello, </title>
       </Head>
 
-      <main>I am supposed to be protected.</main>
+      <main>This is going to be a blog site at some point</main>
     </div>
   );
 }
