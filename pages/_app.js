@@ -55,7 +55,7 @@ MyApp.getInitialProps = async (appContext) => {
     'password29',
     'password30',
   ];
-  
+
   // Check if the password is one of the valid passwords
   if (validPasswords.includes(password)) {
     appProps.pageProps.hasReadPermission = true;
